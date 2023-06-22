@@ -20,26 +20,63 @@ function App() {
 
   const [reportTimeframe, setReportTimeframe] = React.useState(weeklyTimeframe);
 
+  function changeToWeeklyData() {
+    setReportTimeframe(weeklyTimeframe)
+  }
+
+  function changeToDailyData() {
+    const dailyTimeframe = reportData.map((data) => {
+      return {
+        title: data.title,
+        timeframe: data.timeframes.daily,
+      };
+    });
+
+    setReportTimeframe(dailyTimeframe);
+  }
+
+  function changeToMonthlyData() {
+    const monthlyTimeframe = reportData.map((data) => {
+      return {
+        title: data.title,
+        timeframe: data.timeframes.monthly,
+      };
+    });
+
+    setReportTimeframe(monthlyTimeframe);
+  }
+
   return (
     <main className="container">
       <section className="profile">
         <div className="profile__content">
           <img
             className="profile__image"
-            src="{}"
+            src={profilePicture}
             alt=""
           />
           <p className="profile__text">Report for</p>
           <h1 className="profile__title">Jeremy Robson</h1>
         </div>
         <div className="button-group">
-          <Button />
+          <Button
+            title={"Daily"}
+            changeTimeframe={changeToDailyData}
+          />
+          <Button
+            title={"Weekly"}
+            changeTimeframe={changeToWeeklyData}
+          />
+          <Button
+            title={"Monthly"}
+            changeTimeframe={changeToMonthlyData}
+          />
         </div>
       </section>
 
       <section className="report-section">
-        {reportTimeframe.map((data) => {
-          return <ReportCard report={data} />;
+        {reportTimeframe.map((data, index) => {
+          return <ReportCard report={data} key={index}/>;
         })}
       </section>
     </main>
