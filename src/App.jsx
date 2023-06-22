@@ -1,18 +1,32 @@
-import { useState } from "react";
+import React from "react";
+import { useEffect } from "react";
+
 import profilePicture from "./assets/images/image-jeremy.png";
 import "./App.css";
 
-import Button from "./components/button/Button";
-import ReportType from "./components/button/ReportType/ReportType";
+import Button from "./components/Button/Button";
+import ReportCard from "./components/ReportCard/ReportCard";
+
+import reportData from "./assets/data.json";
+//console.log(reportData);
 
 function App() {
+  const weeklyTimeframe = reportData.map((data) => {
+    return {
+      title: data.title,
+      timeframe: data.timeframes.weekly,
+    };
+  });
+
+  const [reportTimeframe, setReportTimeframe] = React.useState(weeklyTimeframe);
+
   return (
     <main className="container">
       <section className="profile">
         <div className="profile__content">
           <img
             className="profile__image"
-            src={profilePicture}
+            src="{}"
             alt=""
           />
           <p className="profile__text">Report for</p>
@@ -24,7 +38,9 @@ function App() {
       </section>
 
       <section className="report-section">
-        <ReportType />
+        {reportTimeframe.map((data) => {
+          return <ReportCard report={data} />;
+        })}
       </section>
     </main>
   );
