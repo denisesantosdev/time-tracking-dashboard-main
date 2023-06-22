@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import profilePicture from "./assets/images/image-jeremy.png";
 import "./App.css";
 
-import Button from "./components/Button/Button";
+import Button from "./components/button/Button";
 import ReportCard from "./components/ReportCard/ReportCard";
 
 import reportData from "./assets/data.json";
