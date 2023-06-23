@@ -1,3 +1,44 @@
-* {
-    outline: 1px solid red;
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 1px solid red;
+}
+
+img {
+  display: inline-block;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button:focus-visible {
+  outline: 2px solid red;
+}
+
+:root {
+  --primary-clr: hsl(246, 80%, 60%);
+
+  --work: hsl(15, 100%, 70%);
+  --play: hsl(195, 74%, 62%);
+  --study: hsl(348, 100%, 68%);
+  --exercise: hsl(145, 58%, 55%);
+  --social: hsl(264, 64%, 52%);
+  --self-care: hsl(43, 84%, 65%);
+
+  --primary-clr-400: hsl(226, 43%, 10%);
+  --primary-clr-300: hsl(235, 46%, 20%);
+  --primary-clr-200: hsl(235, 45%, 61%);
+  --primary-clr-100: hsl(236, 100%, 87%);
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--primary-clr-400);
 }
