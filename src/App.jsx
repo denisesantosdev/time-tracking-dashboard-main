@@ -55,8 +55,10 @@ function App() {
             src={profilePicture}
             alt=""
           />
-          <p className="profile__text">Report for</p>
-          <h1 className="profile__title">Jeremy Robson</h1>
+          <div className="profile__text-wrapper">
+            <p className="profile__text">Report for</p>
+            <h1 className="profile__name">Jeremy Robson</h1>
+          </div>
         </div>
         <div className="button-group">
           <Button

@@ -8,7 +8,7 @@
 }
 
 img {
-  display: inline-block;
+  display: block;
 }
 
 button {
@@ -33,9 +33,10 @@ button:focus-visible {
   --self-care: hsl(43, 84%, 65%);
 
   --primary-clr-400: hsl(226, 43%, 10%);
-  --primary-clr-300: hsl(235, 46%, 20%);
+  --primary-clr-300: hsl(236, 44%, 20%);
   --primary-clr-200: hsl(235, 45%, 61%);
   --primary-clr-100: hsl(236, 100%, 87%);
+
 }
 
 body {
