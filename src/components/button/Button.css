@@ -1,0 +1,9 @@
+.button-group__button {
+    color: var(--primary-clr-200);
+    font-size: 1rem;
+}
+
+.button-group__button:hover,
+.button-group__button:focus {
+    color: var(--primary-clr-100);
+}
