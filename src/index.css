@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid red;
 }
 
 img {
@@ -37,6 +36,7 @@ button:focus-visible {
   --primary-clr-200: hsl(235, 45%, 61%);
   --primary-clr-100: hsl(236, 100%, 87%);
 
+  --border-radius: 15px;
 }
 
 body {

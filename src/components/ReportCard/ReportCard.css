@@ -1,0 +1,108 @@
+.report__card-wrapper {
+  --icon-position-top: -10px;
+  --icon-position-right: 10px;
+  border-radius: var(--border-radius);
+  padding-top: 2.5rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.report__card {
+  background-color: var(--primary-clr-300);
+  border-radius: var(--border-radius);
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.report__card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+.report__card-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.report__card-title {
+    font-size: 1rem;
+}
+
+.report__card-current-number {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.report__card-previous-number {
+    color: var(--primary-clr-100);
+}
+
+.report__card-wrapper.Work {
+  background-color: var(--work);
+}
+
+.report__card-wrapper.Work::after {
+  content: url("./images/icon-work.svg");
+  position: absolute;
+  top: var(--icon-position-top);
+  right: var(--icon-position-right);
+}
+
+.report__card-wrapper.Play {
+  background-color: var(--play);
+}
+
+.report__card-wrapper.Play::after {
+  content: url("./images/icon-play.svg");
+  position: absolute;
+  top: var(--icon-position-top);
+  right: var(--icon-position-right);
+}
+
+.report__card-wrapper.Study {
+  background-color: var(--study);
+}
+
+.report__card-wrapper.Study::after {
+  content: url("./images/icon-study.svg");
+  position: absolute;
+  top: var(--icon-position-top);
+  right: var(--icon-position-right);
+}
+
+.report__card-wrapper.Exercise {
+  background-color: var(--exercise);
+}
+
+.report__card-wrapper.Exercise::after {
+  content: url("./images/icon-exercise.svg");
+  position: absolute;
+  top: var(--icon-position-top);
+  right: var(--icon-position-right);
+}
+
+.report__card-wrapper.Social {
+  background-color: var(--social);
+}
+
+.report__card-wrapper.Social::after {
+  content: url("./images/icon-social.svg");
+  position: absolute;
+  top: var(--icon-position-top);
+  right: var(--icon-position-right);
+}
+
+.report__card-wrapper.Self {
+  background-color: var(--self-care);
+}
+
+.report__card-wrapper.Self::after {
+  content: url("./images/icon-self-care.svg");
+  position: absolute;
+  top: var(--icon-position-top);
+  right: var(--icon-position-right);
+}

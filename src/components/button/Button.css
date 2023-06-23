@@ -5,5 +5,5 @@
 
 .button-group__button:hover,
 .button-group__button:focus {
-    color: var(--primary-clr-100);
+    color: white;
 }

@@ -1,11 +1,12 @@
 import React from "react";
+import "./ReportCard.css"
 
 import iconEllipsis from "/src/assets/images/icon-ellipsis.svg";
 
 export default function ReportCard(props) {
   //console.log(props);
   return (
-    <div className="report__card-wrapper">
+    <div className={`report__card-wrapper ${props.report.title}`}>
       <div className="report__card">
         <header className="report__card-header">
           <h2 className="report__card-title">{props.report.title}</h2>
