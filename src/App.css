@@ -1,3 +1,8 @@
+.report-section {
+  display: grid;
+  gap: 1rem;
+}
+
 .profile__content {
   background-color: var(--primary-clr);
   border-radius: var(--border-radius);
@@ -29,4 +34,10 @@
     border-bottom-right-radius: var(--border-radius);
     display: flex;
     justify-content: space-around;
+}
+
+@media (min-width: 600px) {
+  .report-section {
+    grid-template-columns: 1fr 1fr;
+  }
 }
