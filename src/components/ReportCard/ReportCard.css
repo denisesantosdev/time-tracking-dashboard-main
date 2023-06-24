@@ -46,7 +46,7 @@
 }
 
 .report__card-wrapper.Work::after {
-  content: url("./images/icon-work.svg");
+  content: url("images/icon-work.svg");
   position: absolute;
   top: var(--icon-position-top);
   right: var(--icon-position-right);
