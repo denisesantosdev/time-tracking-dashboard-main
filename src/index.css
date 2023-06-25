@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: 2px solid red;
 }
 
 img {
@@ -40,6 +41,6 @@ button:focus-visible {
 }
 
 body {
-    font-family: 'Rubik', sans-serif;
-    background-color: var(--primary-clr-400);
+  font-family: "Rubik", sans-serif;
+  background-color: var(--primary-clr-400);
 }
