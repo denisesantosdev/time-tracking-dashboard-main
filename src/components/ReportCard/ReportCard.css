@@ -51,12 +51,12 @@
   background-color: var(--work);
 }
 
-.report__card-wrapper.Work::after {
-  content: url("images/icon-work.svg");
+ .report__card-wrapper.Work::after {
+  content: url("../../assets/images/icon-work.svg");
   position: absolute;
   top: var(--icon-position-top);
   right: var(--icon-position-right);
-}
+} 
 
 .report__card-wrapper.Play {
   background-color: var(--play);
