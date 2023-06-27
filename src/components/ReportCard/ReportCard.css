@@ -15,6 +15,11 @@
   position: relative;
   z-index: 1;
   padding: 2rem;
+  transition: all .2s ease;
+}
+
+.report__card:hover {
+  background-color: hsl(234, 39%, 38%);
 }
 
 .report__card-header {
