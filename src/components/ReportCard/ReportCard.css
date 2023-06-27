@@ -63,7 +63,7 @@
 }
 
 .report__card-wrapper.Play::after {
-  content: url("./images/icon-play.svg");
+  content: url("../../assets/images/icon-play.svg");
   position: absolute;
   top: var(--icon-position-top);
   right: var(--icon-position-right);
@@ -74,7 +74,7 @@
 }
 
 .report__card-wrapper.Study::after {
-  content: url("./images/icon-study.svg");
+  content: url("../../assets/images/icon-study.svg");
   position: absolute;
   top: var(--icon-position-top);
   right: var(--icon-position-right);
@@ -85,7 +85,7 @@
 }
 
 .report__card-wrapper.Exercise::after {
-  content: url("./images/icon-exercise.svg");
+  content: url("../../assets/images/icon-exercise.svg");
   position: absolute;
   top: var(--icon-position-top);
   right: var(--icon-position-right);
@@ -96,7 +96,7 @@
 }
 
 .report__card-wrapper.Social::after {
-  content: url("./images/icon-social.svg");
+  content: url("../../assets/images/icon-social.svg");
   position: absolute;
   top: var(--icon-position-top);
   right: var(--icon-position-right);
@@ -107,7 +107,7 @@
 }
 
 .report__card-wrapper.Self::after {
-  content: url("./images/icon-self-care.svg");
+  content: url("../../assets/images/icon-self-care.svg");
   position: absolute;
   top: var(--icon-position-top);
   right: var(--icon-position-right);
