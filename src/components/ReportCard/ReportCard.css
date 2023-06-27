@@ -15,7 +15,7 @@
   position: relative;
   z-index: 1;
   padding: 2rem;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .report__card:hover {
@@ -23,98 +23,91 @@
 }
 
 .report__card-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: .5rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
 
 .report__card-main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .report__card-title {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .report__card-current-number {
-    font-size: 2rem;
-    font-weight: 300;
+  font-size: 2rem;
+  font-weight: 300;
 }
 
 .report__card-previous-number {
-    color: var(--primary-clr-100);
+  color: var(--primary-clr-100);
 }
 
 .report__card-wrapper.Work {
   background-color: var(--work);
 }
 
- .report__card-wrapper.Work::after {
-  content: url("../../assets/images/icon-work.svg");
-  position: absolute;
-  top: var(--icon-position-top);
-  right: var(--icon-position-right);
-} 
-
 .report__card-wrapper.Play {
   background-color: var(--play);
-}
-
-.report__card-wrapper.Play::after {
-  content: url("../../assets/images/icon-play.svg");
-  position: absolute;
-  top: var(--icon-position-top);
-  right: var(--icon-position-right);
 }
 
 .report__card-wrapper.Study {
   background-color: var(--study);
 }
 
-.report__card-wrapper.Study::after {
-  content: url("../../assets/images/icon-study.svg");
-  position: absolute;
-  top: var(--icon-position-top);
-  right: var(--icon-position-right);
-}
-
 .report__card-wrapper.Exercise {
   background-color: var(--exercise);
-}
-
-.report__card-wrapper.Exercise::after {
-  content: url("../../assets/images/icon-exercise.svg");
-  position: absolute;
-  top: var(--icon-position-top);
-  right: var(--icon-position-right);
 }
 
 .report__card-wrapper.Social {
   background-color: var(--social);
 }
 
-.report__card-wrapper.Social::after {
-  content: url("../../assets/images/icon-social.svg");
-  position: absolute;
-  top: var(--icon-position-top);
-  right: var(--icon-position-right);
-}
-
 .report__card-wrapper.Self {
   background-color: var(--self-care);
 }
 
+.report__card-wrapper.Work::after,
+.report__card-wrapper.Play::after,
+.report__card-wrapper.Study::after,
+.report__card-wrapper.Exercise::after,
+.report__card-wrapper.Social::after,
 .report__card-wrapper.Self::after {
-  content: url("../../assets/images/icon-self-care.svg");
   position: absolute;
   top: var(--icon-position-top);
   right: var(--icon-position-right);
 }
 
+.report__card-wrapper.Work:after {
+  content: url("../../assets/images/icon-work.svg");
+}
+
+.report__card-wrapper.Play::after {
+  content: url("../../assets/images/icon-play.svg");
+}
+
+.report__card-wrapper.Study::after {
+  content: url("../../assets/images/icon-study.svg");
+}
+
+.report__card-wrapper.Exercise::after {
+  content: url("../../assets/images/icon-exercise.svg");
+}
+
+.report__card-wrapper.Social::after {
+  content: url("../../assets/images/icon-social.svg");
+}
+
+.report__card-wrapper.Self::after {
+  content: url("../../assets/images/icon-self-care.svg");
+}
+
 @media (min-width: 900px) {
-    .report__card-header {
+  .report__card-header {
     margin-bottom: 1.5rem;
   }
 
@@ -125,10 +118,10 @@
 
   .report__card-current-number {
     font-size: 2.5rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
   .report__card-previous-number {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 }
