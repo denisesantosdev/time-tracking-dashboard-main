@@ -1,7 +1,12 @@
 import React from "react";
-import './Button.css'
+import "./Button.css";
 
 export default function Button(props) {
-  //console.log(props);
-  return <button className="button-group__button" onClick={props.changeTimeframe}>{props.title}</button>;
+  return (
+    <button
+      className={`button-group__button ${props.activeBtn}`}
+      onClick={props.handleClick}>
+      {props.title}
+    </button>
+  );
 }

@@ -8,7 +8,6 @@ import Button from "./components/button/Button";
 import ReportCard from "./components/ReportCard/ReportCard";
 
 import reportData from "./assets/data.json";
-//console.log(reportData);
 
 function App() {
   const weeklyTimeframe = reportData.map((data) => {
@@ -20,8 +19,15 @@ function App() {
 
   const [reportTimeframe, setReportTimeframe] = React.useState(weeklyTimeframe);
 
+  const dailyBtn = "Daily";
+  const weeklyBtn = "Weekly";
+  const monthlyBtn = "Monthly";
+
+  const [activeBtn, setActiveBtn] = React.useState(weeklyBtn);
+
   function changeToWeeklyData() {
-    setReportTimeframe(weeklyTimeframe)
+    setReportTimeframe(weeklyTimeframe);
+    setActiveBtn(weeklyBtn);
   }
 
   function changeToDailyData() {
@@ -33,6 +39,7 @@ function App() {
     });
 
     setReportTimeframe(dailyTimeframe);
+    setActiveBtn(dailyBtn);
   }
 
   function changeToMonthlyData() {
@@ -44,6 +51,11 @@ function App() {
     });
 
     setReportTimeframe(monthlyTimeframe);
+    setActiveBtn(monthlyBtn);
+  }
+
+  function changeActiveBtnClass(btn) {
+    return activeBtn === btn ? "active-btn" : "";
   }
 
   return (
@@ -62,23 +74,31 @@ function App() {
         </div>
         <div className="button-group">
           <Button
-            title={"Daily"}
-            changeTimeframe={changeToDailyData}
+            title={dailyBtn}
+            handleClick={changeToDailyData}
+            activeBtn={changeActiveBtnClass(dailyBtn)}
           />
           <Button
-            title={"Weekly"}
-            changeTimeframe={changeToWeeklyData}
+            title={weeklyBtn}
+            handleClick={changeToWeeklyData}
+            activeBtn={changeActiveBtnClass(weeklyBtn)}
           />
           <Button
-            title={"Monthly"}
-            changeTimeframe={changeToMonthlyData}
+            title={monthlyBtn}
+            handleClick={changeToMonthlyData}
+            activeBtn={changeActiveBtnClass(monthlyBtn)}
           />
         </div>
       </section>
 
       <section className="report-section">
         {reportTimeframe.map((data, index) => {
-          return <ReportCard report={data} key={index}/>;
+          return (
+            <ReportCard
+              report={data}
+              key={index}
+            />
+          );
         })}
       </section>
     </main>

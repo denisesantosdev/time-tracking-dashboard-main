@@ -7,3 +7,7 @@
 .button-group__button:focus {
     color: white;
 }
+
+.active-btn {
+    color: white;
+}
